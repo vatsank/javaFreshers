@@ -1,0 +1,51 @@
+
+
+Insurance 
+
+   Life Insurance 
+   InsureName
+   calculatePremium(){}
+   Health Insurance
+   
+   
+   Motor Insurance
+   
+   engineCpacity
+   
+   
+   
+   Policy Bazzar is a Insurance Service Provider 
+   
+   It handles three different Policies like Life,Health and Motor Insurance
+   
+   Premium for the Life Insurance is calculated as follows
+   
+    If age of the Person is less than 18 years its 3000 per month
+    
+    If age of the Person is greater than 18 its 2300 per Month
+    
+    
+    
+   Premium for the Motor Insurance is calculated as follows
+   
+      if Its 100 cc bike its 1200 per month
+      
+      else its 800 per month
+      
+      
+      Premium for the Health Insurance is calculated as follows
+      
+      If age < 20 and no pre existing disease its 2000 per month
+      
+      If age < 20 and pre existing disease its 5000 per month
+      
+   
+      If age > 20 and no pre existing disease its 5000 per month
+      
+      If age > 20 and pre existing disease its 9000 per month
+   
+   
+   
+   
+   
+   
