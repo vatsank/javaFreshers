@@ -86,8 +86,7 @@ public class Patient  implements Comparable<Patient>{
 	}
 	@Override
 	public String toString() {
-		return "Patient [patientId=" + patientId + ", patientName=" + patientName + ", age=" + age + ", gender="
-				+ gender + "]";
+		return  patientId + ","+ patientName+ ","+ age + ", "+gender;
 	}
 	
 	

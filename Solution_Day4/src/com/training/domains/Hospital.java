@@ -14,9 +14,9 @@ public class Hospital {
 		Doctor ramesh = new Doctor(101,"Ramesh",9484848,"ENT");
 		
 		
-		Patient ram = new Patient(101, "Ramesh",34, "male");
+		Patient ram = new Patient(103, "Ramesh Reddy",34, "male");
 		
-		Patient shyam = new Patient(102, "Shyam",24, "male");
+		Patient shyam = new Patient(104, "Shyam Lal",45, "male");
 		
 		
 		  
