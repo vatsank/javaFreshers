@@ -66,8 +66,8 @@ public class Appointment {
 		   
 		   		   PrintWriter writer=null;
 		   try {
-			 writer = new PrintWriter(new FileWriter(new File(fileName)
-,true));
+	 writer = new PrintWriter(new FileWriter(new File(fileName)
+	,true));
 			
 			for(Object eachObject : list) {
 				
