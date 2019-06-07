@@ -13,10 +13,12 @@ public class BloodDonarDaoImpl implements Dao<BloodDonor> {
 	
 	private Connection con;
 	
-	Logger log = Logger.getLogger("childLogger");
+	// Logger log = Logger.getLogger("firstChildLogger");
 	
+	// Logger log = Logger.getRootLogger();
 	
-
+	Logger log = Logger.getLogger("secondChildLogger");
+	
 	public BloodDonarDaoImpl(Connection con) {
 		super();
 		log.info("DB Connection Established");

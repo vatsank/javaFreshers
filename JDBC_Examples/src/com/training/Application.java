@@ -20,6 +20,7 @@ public class Application {
 		 Logger log = Logger.getRootLogger();
 		
 	//	Logger log = Logger.getLogger("childLogger");
+		 
 		
 		BloodDonarDaoImpl dao = new BloodDonarDaoImpl(con);
 		
