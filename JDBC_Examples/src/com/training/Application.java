@@ -5,6 +5,9 @@ import com.training.domains.BloodDonor;
 import com.training.utils.SqlConnection;
 import java.sql.*;
 import java.util.List;
+
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 public class Application {
 
 	public static void main(String[] args) {
@@ -12,6 +15,11 @@ public class Application {
 		
 		Connection con  =SqlConnection.getSqlConnection();
 		
+		// BasicConfigurator.configure();
+		
+		 Logger log = Logger.getRootLogger();
+		
+	//	Logger log = Logger.getLogger("childLogger");
 		
 		BloodDonarDaoImpl dao = new BloodDonarDaoImpl(con);
 		
@@ -27,11 +35,11 @@ public class Application {
 //		
 //		System.out.println(rowDeleted + ":=Row Deleted");
 //		
-		
 		List<BloodDonor> list = dao.findAll();
 		
-		System.out.println(list);
+		log.debug(list);
 
+		log.debug("Hello from logger");
 		// Add a Switch case here to select one of the option
 		
 	}

@@ -2,6 +2,9 @@ package com.training.daos;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.log4j.Logger;
+
 import java.sql.*;
 import com.training.domains.BloodDonor;
 import com.training.ifaces.Dao;
@@ -10,11 +13,13 @@ public class BloodDonarDaoImpl implements Dao<BloodDonor> {
 	
 	private Connection con;
 	
+	Logger log = Logger.getLogger("childLogger");
 	
 	
 
 	public BloodDonarDaoImpl(Connection con) {
 		super();
+		log.info("DB Connection Established");
 		this.con = con;
 	}
 
@@ -54,6 +59,7 @@ public class BloodDonarDaoImpl implements Dao<BloodDonor> {
 	@Override
 	public List<BloodDonor> findAll() {
 
+		log.info("Invoking Find All Method");
 		List<BloodDonor> list = new ArrayList<>();
 		
 		PreparedStatement pstmt  = null;
@@ -65,7 +71,8 @@ public class BloodDonarDaoImpl implements Dao<BloodDonor> {
 			ResultSet resultSet = pstmt.executeQuery();
 			
 			while(resultSet.next()) {
-				
+			
+			log.info("Got The Result Set Iterating it");
 				    long donorId =    resultSet.getInt("donorId");
 				     String donorName =   resultSet.getString("donorName");
 				      String bloodGroup =  resultSet.getString("bloodGroup");
@@ -77,16 +84,18 @@ public class BloodDonarDaoImpl implements Dao<BloodDonor> {
 			}
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.debug(e.getMessage());
 		}
 		finally {
 			
 			try {
 				pstmt.close();
+				log.debug("prepared statment closed");
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
+		log.info("Returnting the Donar List");
 		return list;
 	}
 

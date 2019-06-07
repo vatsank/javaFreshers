@@ -1,0 +1,20 @@
+Write a program that reads the contents of a Text file 
+and creates an exact copy of the file, except that each line is numbered.
+ 
+The user should be able to enter the names of the input and output files
+ from the keyboard.
+
+ 
+ names.txt
+ 
+ ramesh,45,be csc,4.5
+ rajesh,65,be itc,4.2
+ 
+ 
+ 
+ numberNames.txt
+ 
+ 1.ramesh,45,be csc,4.5
+ 2.rajesh,65,be itc,4.2
+ 
+ 
